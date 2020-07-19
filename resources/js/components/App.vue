@@ -3,7 +3,7 @@
     <sidebar/>
 
     <container/>
-    <Footer/>    
+    <Footer/>
     </div>
 </template>
 

@@ -10929,17 +10929,15 @@ a.text-dark:focus {
 }
 
 html {
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   background: #4aaff4;
   background: radial-gradient(circle, black 32%, black 100%);
 }
 
-#teste {
+.teste {
   color: red !important;
 }
 

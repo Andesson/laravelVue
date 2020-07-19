@@ -6,12 +6,10 @@
       clipped
     >
       <v-list dense>
-        <v-subheader>CADASTROS</v-subheader>
         <v-list-item link>
           <v-list-item-action>
             <v-icon>mdi-view-dashboard</v-icon>
           </v-list-item-action>
-
           <v-list-item-content>
             <v-list-item-title>Dashboard</v-list-item-title>
           </v-list-item-content>
@@ -32,43 +30,23 @@
       clipped-left
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Delivery</v-toolbar-title>
-
+      <v-toolbar-title>Application</v-toolbar-title>
       <v-spacer></v-spacer>
-
-        <v-btn icon>
-       <v-app-bar-nav-icon></v-app-bar-nav-icon>
-      </v-btn>
+      <v-avatar color="indigo" size="50" aling="center" justify="center">
+      <img
+        src="https://cdn.vuetifyjs.com/images/john.jpg"
+        alt="ADM"
+      >
+    </v-avatar>
     </v-app-bar>
 
-    <v-main>
-      <v-container
-        class="fill-height"
-        fluid
-      >
-        <v-row
-          align="center"
-          justify="center"
-        >
-          <v-col class="shrink">
-            <v-tooltip right>
-              <template v-slot:activator="{ on }">
-                <v-btn
-                  :href="source"
-                  icon
-                  large
-                  target="_blank"
-                  v-on="on"
-                >
-                  <v-icon large>mdi-code-tags</v-icon>
-                </v-btn>
-              </template>
-              <span>Source</span>
-            </v-tooltip>
-          </v-col>
+    <v-content>
+      <v-container class="fill-height" fluid>
+        <v-row align="center" justify="center">
+            <teste/>
         </v-row>
       </v-container>
-    </v-main>
+    </v-content>
 
     <v-footer app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
@@ -77,7 +55,12 @@
 </template>
 
 <script>
+
+  import teste from "../user/newComponent"
   export default {
+    components: {
+        teste,
+    },
     props: {
       source: String,
     },
