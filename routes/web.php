@@ -13,18 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/{vue_capture?}', function () {
-//     return view('initial');
-// })->where('vue_capture', '[\/\w\.-]*');
-
-App::setLocale(substr($_SERVER["HTTP_ACCEPT_LANGUAGE"], 0, 2));
+//App::setLocale(substr($_SERVER["HTTP_ACCEPT_LANGUAGE"], 0, 2));
+Auth::routes();
 
 Route::group(['middleware' => ['auth']], function () {
+
+
     Route::get('/', function () {
-        return view('index');
+         return view('index');
+    });
+
+    // Route::get('/adm/{vue_capture?}', function () {
+    //     return view('index');
+    // })->where('vue_capture', '[\/\w\.-]*');
+
+   // Route::resource('produto', 'ProdutoController');
+
+    Route::any('{slug}', function () {
+          return view('index');
     });
 });
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+

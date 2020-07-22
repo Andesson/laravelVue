@@ -28,6 +28,7 @@
     },
     "dependencies": {
         "@mdi/js": "^5.3.45",
+        "vue-router": "^3.3.4",
         "vuetify": "^2.2.33",
         "vuetify-loader": "^1.4.4"
     }

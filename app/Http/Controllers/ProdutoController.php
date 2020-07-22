@@ -4,13 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class ProdutoController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
@@ -23,6 +18,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        return response()->json([
+            'msg' => 'Tela de produtos'
+        ]);
     }
 }
